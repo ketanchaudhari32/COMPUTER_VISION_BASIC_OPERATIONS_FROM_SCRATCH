@@ -26,15 +26,15 @@ resulting image.
 b) Design a convolution kernel that computes, for each pixel, the average intensity value in a 3x3 region.
 Use this kernel and the filtering function above, and save the resulting image.
 c) Use the kernels provided below, apply the filtering function and save the resulting images. Comment
-on the effect of each kernel.
-kernel A
-1 2 1
-2 4 2
-1 2 1
-kernel B
-0 1 0
-1 -4 1
-0 1 0
+on the effect of each kernel.  
+kernel A  
+1 2 1  
+2 4 2  
+1 2 1  
+kernel B  
+0 1 0  
+1 -4 1  
+0 1 0  
 d) Use the filtering function for the following filtering operations: (i) A followed by A; (ii) A followed by B;
 (iii) B followed by A. Comment the results.
 <br />
