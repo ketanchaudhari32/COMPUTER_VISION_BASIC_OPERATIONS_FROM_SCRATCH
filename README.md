@@ -24,6 +24,7 @@ a) Code a function that takes an input image, performs convolution with a given 
 resulting image.
 b) Design a convolution kernel that computes, for each pixel, the average intensity value in a 3x3 region.
 Use this kernel and the filtering function above, and save the resulting image.
+<br>
 c) Use the kernels provided below, apply the filtering function and save the resulting images. Comment
 on the effect of each kernel.
 kernel A
