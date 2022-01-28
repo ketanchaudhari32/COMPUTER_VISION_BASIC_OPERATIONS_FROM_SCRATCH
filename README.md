@@ -1,7 +1,26 @@
-## OPEN_CV_ASSIGNMENT
+## OPEN_CV_BASIC_OPERATIONS
 
-#ECS709 - Introduction to Computer Vision
-#Coursework
+Requirements:    
+Python    
+Jupyter notebook    
+<br>
+
+Steps to run the code:    
+1. Install anaconda and jupyter notebook    
+2. Open conda prompt and create conda virtual envirnoment    
+    2.1 Running the below command in prompt   
+        ```conda env create --name open_cv --file sw/opencv_env.yml ```   
+        This will create virtual environment with name open_cv using environment requirents dependincies mentioned in sw/opencv_env.yml file.    
+    2.2 Switch from base to open_cv environment by typing.    
+        ```conda activate open_cv```    
+    2.3 In virtual environment, create a kernle of environemnt by typing command.       
+        ```python -m ipykernel install --user --name open_cv --display-name "open_cv"```    
+    2.4 Open Jupyter notebook from virtual environment by using command.    
+        ```jupyter notebook```
+3. Once jypter notebook is opened.   
+    3.1 Open source file and change kernel to 'open_cv' from base kernel.    
+    3.2 Run each cell by pressing shift + enter on keyboard pointing to individual cell.
+
 1) Transformations.
 Rotation, translation and skew are useful operations for matching, tracking, and data augmentation.  
 a) Write a function that takes as input an image I, rotates it by an angle θ1 and horizontally skews it by
@@ -15,7 +34,7 @@ advantages and disadvantages of different approaches.
 c) Analyse the results when you change the order of the two operators: R(S(I)) and S(R(I)).  
 i) Rotate the image by θ1 = 20 clockwise and then skew the result by θ2 = 50.  
 ii) Skew the image by θ2 = 50 and then rotate the result by θ1 = 20 clockwise.  
-Are the results of (i) and (ii) the same? Why?
+
 <br />
 
 2) Convolution. (Use Dataset A)
@@ -55,9 +74,7 @@ sequence, use the histogram intersection function to calculate the intersection 
 frames (e.g. between It and It+1, between It+1 and It+2 and so on). Find how to normalize the
 intersection. Does that change the results? Plot the intersection values over time and the normalised
 intersection values, and save the corresponding figures. Show and comment the figures in the report.  
-c) Discuss in the report the following: What does the intersection value represent for a given input video?
-Can you use it to make a decision about scene changes? How robust to changes in the video is the
-histogram intersection? When does it fail?
+
 <br />
 
 4) Texture Classification. (Use Datasets A and B)
@@ -73,11 +90,9 @@ example, you could combine several local descriptions into a global description 
 Discuss in the report alternative approaches. Using the global descriptor you created, implement a
 classification process that separates the images in the dataset into two categories: face images and
 non-face images (for example, you could use histogram similarities). Comment the results in the
-report. Is the global descriptor able to represent whole images of different types (e.g. faces vs. cars)?
-Identify problems (if any), discuss them in the report and suggest possible solutions.  
+report. 
 c) Decrease the window size and perform classification again. Comment the results in the report.
 d) Increase the window size and perform classification again. Comment the results in the report.
-e) Discuss how LBP can be used or modified for the analysis of dynamic textures in a video.
 <br />
 
 5) Object Counting. (Use Dataset C)
@@ -89,5 +104,4 @@ for frame It, for each t). Comment the results in the report.
 c) Write a function that generates a reference frame (background) for the sequence using for example
 frame differencing and a weighted temporal averaging algorithm.  
 d) Write a function that counts the number of moving objects in each frame of a sequence. Generate a
-bar plot that visualizes the number of objects for each frame of the whole sequence. Discuss in the
-report the implemented solution, including advantages and disadvantages. 
+bar plot that visualizes the number of objects for each frame of the whole sequence. 
